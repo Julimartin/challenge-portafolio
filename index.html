@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Julieta Martin</title>
+</head>
+
+<body>
+    <!-- Menú -->
+    <header class="cabecera">
+        <box-icon name='wink-smile' animation='tada-hover' type="solid" color='#f018ff' size="lg"></box-icon>
+        <button class="cabecera__icono-menu"" onclick="toggleMenu()">
+            <box-icon name='menu-alt-right' color="#f018ff" size="lg"></box-icon>
+        </button>
+        <nav class="navegacion">
+            <ul class="navegacion__lista" id="navMenu">
+                <li class="navegacion__elemento"><a href="#sobre-mi" onclick="closeMenu()">Sobre mí</a></li>
+                <li class="navegacion__elemento"><a href="#habilidades" onclick="closeMenu()">Skills</a></li>
+                <li class="navegacion__elemento"><a href="#aficiones" onclick="closeMenu()">Hobbies</a></li>
+                <li class="navegacion__elemento"><a href="#formacion" onclick="closeMenu()">Formación</a></li>
+                <li class="navegacion__elemento"><a href="#proyectos" onclick="closeMenu()">Proyectos</a></li>
+                <li class="navegacion__elemento"><a href="#contacto" onclick="closeMenu()">martin.julieta@hotmail.com</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Presentación -->
+    <section class="presentacion">
+        <img class="presentacion__foto" src="assets/foto-perfil.jpg" alt="Foto de perfil">
+        <div class="presentacion__contenedor">
+            <h1 class="presentacion__titulo">Hola, mi nombre es</p>
+            <h2 class="presentacion__titulo-nombre">Julieta Martin.</h1>
+            <h3 class="presentacion__titulo-slogan">Transformo tus ideas en Apps.</h1>
+            <p class="presentacion__subtitulo">Soy una desarrolladora aficionada. Estudiar, crear y  </p>
+            <ul class="redes bx-ul">
+                <li class="redes__img"><a href="">Github <img src="assets/arrow.png" alt="Flecha"></a></li>
+                <li class="redes__img"><a href="">Linkedin <img src="assets/arrow.png" alt="Flecha"></a></li>
+                <li class="redes__img"><a href="">Currículo <img src="assets/arrow.png" alt="Flecha"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección sobre mí -->
+    <section class="sobre-mi" id="sobre-mi">
+        <h2 class="sobre-mi__titulo">Sobre mí</h2>
+        <p class="sobre-mi__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia.</p> 
+    </section>
+
+    <!-- Sección de Habilidades -->
+    <section class="habilidades" id="habilidades">
+        <h2 class="habilidades__titulo">Skills</h2>
+        <ul class="habilidades__lista">
+            <li class="habilidades__elemento">
+                <box-icon name='html5' type='logo' animation='burst-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="habilidades__nombre">HTML 5</p>
+            </li>
+            <li class="habilidades__elemento">
+                <box-icon name='javascript' type='logo' animation='burst-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="habilidades__nombre">JavaScript</p>
+            </li>
+            <li class="habilidades__elemento">
+                <box-icon name='python' type='logo' animation='spin-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="habilidades__nombre">Python</p>
+            </li>
+            <li class="habilidades__elemento">
+                <box-icon name='nodejs' type='logo' animation='burst-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="habilidades__nombre">Node.js</p>
+            </li>
+            <li class="habilidades__elemento">
+                <box-icon name='react' type='logo' animation='spin-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="habilidades__nombre">React</p>
+            </li>
+            <li class="habilidades__elemento">
+                <box-icon name='css3' type='logo' animation='burst-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="habilidades__nombre">CSS</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Sección de Aficiones -->
+    <section class="aficiones" id="aficiones">
+        <h2 class="aficiones__titulo">Hobbies</h2>
+        <ul class="aficiones__lista">
+            <li class="aficiones__elemento">
+                <box-icon name='palette' type='solid' animation='tada-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="aficiones__nombre">Dibujar</p>
+            </li>
+            <li class="aficiones__elemento">
+                <box-icon name='game' type='solid' animation='spin-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="aficiones__nombre">Jugar</p>
+            </li>
+            <li class="aficiones__elemento">
+                <box-icon name='speaker' type='solid' animation='tada-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="aficiones__nombre">Oír música</p>
+            </li>
+            <li class="aficiones__elemento">
+                <box-icon name='code' animation='burst-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="aficiones__nombre">Estudiar</p>
+            </li>
+            <li class="aficiones__elemento">
+                <box-icon name='cycling' animation='fade-right-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="aficiones__nombre">Andar en Bici</p>
+            </li>
+            <li class="aficiones__elemento">
+                <box-icon name='dog' type='solid' animation='tada-hover' color='#f018ff' size='lg'></box-icon>
+                <p class="aficiones__nombre">Pasear perros</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Sección de Formación académica -->
+    <section class="formacion" id="formacion">
+        <h2 class="formacion__titulo">Formación académica</h2>
+        <ul class="formacion__lista">
+            <li class="formacion__elemento">
+                <img class="formacion__icono" src="assets/ufpr_logo.png" alt="UNAHUR">
+                <div>
+                    <h3 class="formacion__nombre">Lic. en informática</h3>
+                    <p class="formacion__detalle">En curso - UNAHUR</p>
+                </div>
+            </li>
+            <li class="formacion__elemento">
+                <img class="formacion__icono" src="assets/ufpr_logo.png" alt="Coder">
+                <div>
+                    <h3 class="formacion__nombre">Data Analytics</h3>
+                    <p class="formacion__detalle">2020 - CoderHouse</p>
+                </div>
+            </li>
+            <li class="formacion__elemento"></li>
+                <img class="formacion__icono" src="assets/ufpr_logo.png" alt="Coder">
+                <div>
+                    <h3 class="formacion__nombre">Full-Stack Web Developer</h3>
+                    <p class="formacion__detalle">2023 - Codo a Codo</p>
+                </div>
+            </li>
+            <li class="formacion__elemento">
+                <box-icon name='devices' type='solid' animation='burst-hover' color='#f018ff' size="lg"></box-icon>
+                <div>
+                    <h3 class="formacion__nombre">UX/UI Design</h3>
+                    <p class="formacion__detalle">En curso - Talento Tech</p>
+                </div>
+            </li>
+            <li class="formacion__elemento">
+                <img class="formacion__icono" src="assets/ufrj_logo.png" alt="UFRJ">
+                <div>
+                    <h3 class="formacion__nombre">Front-End Web Developer</h3>
+                    <p class="formacion__detalle">En curso - Alura</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Sección de Proyectos -->
+    <section class="proyectos" id="proyectos">
+        <h2 class="proyectos__titulo">Proyectos</h2>
+        <div class="proyectos__contenedor">
+            <h3 class="proyectos__nombre">Título de la Experiencia</h3>
+            <p class="proyectos__descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+        </div>
+        <div class="proyectos__contenedor">
+            <h3 class="proyectos__nombre">Título de la Experiencia</h3>
+            <p class="proyectos__descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contacto" id="contacto">
+        <h2 class="contacto__titulo">Contacto</h2>
+        <form class="contacto__formulario">
+            <input class="contacto__campo" type="text" placeholder="Nombre">
+            <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
+            <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
+            <button class="contacto__boton" type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+    <script src="script.js"></script>
+</html>

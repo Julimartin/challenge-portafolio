@@ -1,0 +1,330 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-de-fondo: #0A192F;
+    --color-de-link: #f018ff;
+    --color-fuente-titulo: #CCD6F6;
+    --color-fuente-secundaria: #8892B0;
+    --sombra-cabecera: rgba(2, 12, 27, 0.7);
+
+    --fuente-primaria: "Inter", sans-serif;
+    --fuente-secundaria: "Fira Code", monospace;
+
+    --espaciado-8: 0.5rem;
+    --espaciado-16: 1rem;
+    --espaciado-32: 2rem;
+
+    --tamaño-fuente-8: 0.5rem;
+    --tamaño-fuente-18: 1.1rem;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: var(--fuente-primaria);
+    color: var(--color-fuente-secundaria);
+    margin: 20px 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+h1,h2,h3,p {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: var(--color-fuente-titulo);
+    text-align: center;
+}
+
+ol, ul, li {
+    list-style: none;
+    padding-inline: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+section {
+    padding: var(--espaciado-16);
+}
+
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: var(--espaciado-16);
+    box-shadow: 0 10px 30px -10px var(--sombra-cabecera);
+}
+
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+}
+
+.cabecera__icono-menu {
+    display: block;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+ul.navegacion__lista {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: var(--color-de-fondo);
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: var(--espaciado-32);
+    width: 70%;
+    height: 100vw;
+}
+
+/* Mostrar el menú cuando esté activo */
+ul.navegacion__lista.show {
+    display: flex;
+}
+
+.navegacion__elemento a {
+    font-family: var(--fuente-secundaria);
+    font-size: var(--espaciado-16);
+    color: var(--color-fuente-titulo);
+}
+
+.navegacion__elemento a:hover {
+    color: var(--color-de-link);
+    border-bottom: 1px solid var(--color-de-link);
+}
+
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    gap:var(--espaciado-16);
+}
+
+.presentacion__contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.presentacion__titulo {
+    color: var(--color-de-link);
+    font-family: var(--fuente-secundaria);
+    font-size: var(--espaciado-16);
+    font-weight: 400;
+    margin: var(--espaciado-16) 0 20px 5px;
+}
+
+.presentacion__titulo-nombre {
+    text-align: left;
+}
+
+.presentacion__titulo-nombre, .presentacion__titulo-slogan {
+    font-size: clamp(40px, 8vw, 80px);
+}
+
+.presentacion__titulo-slogan {
+    margin-top: 5px;
+}
+
+.presentacion__subtitulo {
+    font-size: 1.12rem;
+    font-weight: 400;
+    max-width: 540px;
+    margin-top: 40px;
+    margin-left: 5px;
+}
+
+.presentacion__foto {
+    display: none;
+}
+
+.redes {
+    font-family: var(--fuente-secundaria);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+
+.sobre-mi {
+    display: flex;
+    flex-direction: column;
+    gap:var(--espaciado-16);
+    color: var(--color-de-fondo);
+    background: var(--color-fuente-titulo);
+}
+
+.sobre-mi__titulo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap:var(--espaciado-16);
+    color: var(--color-de-fondo);
+}
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+
+.habilidades__lista, .aficiones__lista {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.habilidades__elemento, .aficiones__elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 130px;
+    height: 98px;
+    margin-top: 32px;
+    border: 1px solid var(--color-de-link);
+    border-radius: 3px;
+    padding: var(--espaciado-16);
+}
+
+.habilidades__nombre, .aficiones__nombre {
+    font-family: var(--fuente-secundaria);
+}
+
+/*------------------------------ Sección de Formación --------------------------------*/
+.formacion__lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-16)
+}
+
+.formacion__elemento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espaciado-8);
+    border: 1px solid var(--color-de-link);
+    padding: var(--espaciado-32) 0;
+    margin: 0 var(--espaciado-16);
+}
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+
+    section, .presentacion {
+        padding: var(--espaciado-32);
+    }
+
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__icono-menu {
+        display: none;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    ul.navegacion__lista {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--espaciado-16);
+        margin-top: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+
+    .navegacion__elemento:nth-child(1),
+    .navegacion__elemento:nth-child(2),
+    .navegacion__elemento:nth-child(3),
+    .navegacion__elemento:nth-child(4),
+    .navegacion__elemento:nth-child(5) {
+        display: none;
+    }
+
+    .presentacion {
+        padding: 3.75rem;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .presentacion__foto {
+        display:inline;
+        object-fit: cover;
+        width: 30%;
+        height: auto;
+        border-radius: 20%;
+    }
+
+    .redes {
+        justify-content: flex-start;
+        gap: var(--espaciado-32)
+    }
+
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__elemento:nth-child(1),
+    .navegacion__elemento:nth-child(2),
+    .navegacion__elemento:nth-child(3),
+    .navegacion__elemento:nth-child(4),
+    .navegacion__elemento:nth-child(5) {
+        display: flex;
+    }
+
+    .navegacion__elemento a {
+        font-size: var(--tamaño-fuente-18);
+        padding: 5px 20px;
+        border-left: 1px solid var(--color-resaltado);
+        border-bottom: 2px solid var(--color-resaltado);
+        border-radius: 5%;
+    }
+
+}
